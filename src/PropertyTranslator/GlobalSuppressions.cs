@@ -1,0 +1,22 @@
+﻿// Diese Datei wird von der Codeanalyse zur Wartung der SuppressMessage- 
+// Attribute verwendet, die auf dieses Projekt angewendet werden.
+// Unterdrückungen auf Projektebene haben entweder kein Ziel oder 
+// erhalten ein spezifisches Ziel mit Namespace-, Typ-, Memberbereich usw.
+//
+// Wenn Sie dieser Datei eine Unterdrückung hinzufügen möchten, klicken Sie mit der 
+// rechten Maustaste auf die Meldung in der Fehlerliste, zeigen Sie auf 
+// "Meldung(en) unterdrücken", und klicken Sie auf "In Projektunterdrückungsdatei".
+// Sie müssen dieser Datei nicht manuell Unterdrückungen hinzufügen.
+
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1000:DoNotDeclareStaticMembersOnGenericTypes", Scope = "member", Target = "PropertyTranslator.DefaultTranslationOf`1.#Evaluate`1(!0,System.Reflection.MethodBase)", Justification = "Helper")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1000:DoNotDeclareStaticMembersOnGenericTypes", Scope = "member", Target = "PropertyTranslator.DefaultTranslationOf`1.#Property`1(System.Linq.Expressions.Expression`1<System.Func`2<!0,!!0>>)", Justification = "Helper")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1000:DoNotDeclareStaticMembersOnGenericTypes", Scope = "member", Target = "PropertyTranslator.DefaultTranslationOf`1.#Property`1(System.Linq.Expressions.Expression`1<System.Func`2<!0,!!0>>,System.Linq.Expressions.Expression`1<System.Func`2<!0,!!0>>,System.String)", Justification = "Helper")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures", Scope = "member", Target = "PropertyTranslator.DefaultTranslationOf`1.#Property`1(System.Linq.Expressions.Expression`1<System.Func`2<!0,!!0>>,System.Linq.Expressions.Expression`1<System.Func`2<!0,!!0>>,System.String)", Justification = "Helper")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures", Scope = "member", Target = "PropertyTranslator.DefaultTranslationOf`1+IncompletePropertyTranslation`1.#Is(System.Linq.Expressions.Expression`1<System.Func`2<!0,!1>>,System.String)", Justification = "Helper")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures", Scope = "member", Target = "PropertyTranslator.DefaultTranslationOf`1.#Property`1(System.Linq.Expressions.Expression`1<System.Func`2<!0,!!0>>)", Justification = "Helper")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures", Scope = "member", Target = "PropertyTranslator.TranslationMap.#Add`2(System.Linq.Expressions.Expression`1<System.Func`2<!!0,!!1>>,PropertyTranslator.CompiledExpression`2<!!0,!!1>,System.String)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures", Scope = "member", Target = "PropertyTranslator.TranslationMap.#Add`2(System.Linq.Expressions.Expression`1<System.Func`2<!!0,!!1>>,System.Linq.Expressions.Expression`1<System.Func`2<!!0,!!1>>,System.String)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures", Scope = "member", Target = "PropertyTranslator.TranslationMap.#Add`2(System.Linq.Expressions.LambdaExpression,System.Linq.Expressions.Expression`1<System.Func`2<!!0,!!1>>,System.String)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible", Scope = "type", Target = "PropertyTranslator.DefaultTranslationOf`1+IncompletePropertyTranslation`1", Justification = "Helper")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Scope = "member", Target = "PropertyTranslator.TranslationMap.#Add`2(System.Linq.Expressions.Expression`1<System.Func`2<!!0,!!1>>,PropertyTranslator.CompiledExpression`2<!!0,!!1>,System.String)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Scope = "member", Target = "PropertyTranslator.TranslationMap.#Add`2(System.Linq.Expressions.Expression`1<System.Func`2<!!0,!!1>>,System.Linq.Expressions.Expression`1<System.Func`2<!!0,!!1>>,System.String)")]

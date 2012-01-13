@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PropertyTranslator", "PropertyTranslator\PropertyTranslator.csproj", "{B8D09E26-6CF7-43EF-832E-434C6AFB4306}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PropertyTranslator.Tests", "PropertyTranslator.Tests\PropertyTranslator.Tests.csproj", "{C980F20D-4956-4960-8423-AFC382276EE7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{B8D09E26-6CF7-43EF-832E-434C6AFB4306}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8D09E26-6CF7-43EF-832E-434C6AFB4306}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8D09E26-6CF7-43EF-832E-434C6AFB4306}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C980F20D-4956-4960-8423-AFC382276EE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C980F20D-4956-4960-8423-AFC382276EE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C980F20D-4956-4960-8423-AFC382276EE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C980F20D-4956-4960-8423-AFC382276EE7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
