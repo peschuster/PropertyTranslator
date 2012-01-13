@@ -35,7 +35,7 @@ A POCO entity class from EntityFramework. Although in the database only a `First
     	public string LastName { get; set; }    	
     }
 
-### A more advanced example with ui culture dependent translations
+#### A more advanced example with ui culture dependent translations
 
 The context: a database table, mapped with entity framework to POCO entity classes with two fields: `EnglishName` and `GermanName`. With the following snippet, you can use the `Name` property in linq queries which resolves to the name (either `EnglishName` or `GermanName`) depending on the current ui culture.
 
@@ -60,7 +60,7 @@ The context: a database table, mapped with entity framework to POCO entity class
     	public string GermanName { get; set; }    	
     }
 
-## How to enable PropertyTranslator
+### How to enable PropertyTranslator
 
 You can *enable* PropertyTranslator by adding the `ProperyVisitor` to your EntityFramework ObjectSets (of course it works not only with EntityFramework but with any LINQ provider):
 
