@@ -62,7 +62,7 @@ The context: a database table, mapped with entity framework to POCO entity class
 
 ### How to enable PropertyTranslator
 
-You can *enable* PropertyTranslator by adding the `ProperyVisitor` to your EntityFramework ObjectSets (of course it works not only with EntityFramework but with any LINQ provider):
+You can *enable* PropertyTranslator by adding the `PropertyVisitor` to your EntityFramework ObjectSets (of course it works not only with EntityFramework but with any LINQ provider):
 
     using QueryInterceptor;
     using PropertyTranslator;

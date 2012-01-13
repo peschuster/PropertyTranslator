@@ -9,7 +9,7 @@ namespace PropertyTranslator
     /// <summary>
     /// Provider for <see cref="PropertyTranslator.PropertyVisitor{T}"/>.
     /// </summary>
-    public class PropertyVisitor<T> : ExpressionVisitor
+    public class PropertyVisitor : ExpressionVisitor
     {
         /// <summary>
         /// Stack of bindings to visit.
