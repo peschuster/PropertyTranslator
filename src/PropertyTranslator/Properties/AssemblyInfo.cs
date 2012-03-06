@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
@@ -6,11 +7,11 @@ using System.Runtime.InteropServices;
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die mit einer Assembly verknüpft sind.
 [assembly: AssemblyTitle("PropertyTranslator")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Linq translator for properties in queries (based on Microsoft.Linq.Translations).")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Peter Schuster")]
 [assembly: AssemblyProduct("PropertyTranslator")]
-[assembly: AssemblyCopyright("Copyright ©  2012")]
+[assembly: AssemblyCopyright("Copyright © Peter Schuster 2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -34,3 +35,7 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+
+[assembly: CLSCompliant(false)]
+
+[assembly: InternalsVisibleTo("PropertyTranslator.Tests, PublicKey=002400000480000094000000060200000024000052534131000400000100010097844b7877e84bfdacc8c9d522fa30ae97cea61db61a981f87022d5401e807b6f082d3493b15f9a348671437b14234f8413026148e260a5e5e977b4d59daa7e8e6b957c472c5bf7255efd9d27f7a1e63e26011b74e79454ed96905f640f4652d47ca956f0f6cbdb4f4caf8ffa32514d5db5c5757102be64432504a90572947be")]

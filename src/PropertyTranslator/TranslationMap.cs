@@ -35,7 +35,7 @@ namespace PropertyTranslator
         }
 
         /// <summary>
-        /// Instance of the default <see cref="TranslationMap"/>.
+        /// Gets the instance of the default <see cref="TranslationMap"/>.
         /// </summary>
         /// <value>The default translation map.</value>
         public static TranslationMap DefaultMap
@@ -50,6 +50,8 @@ namespace PropertyTranslator
         /// <param name="compiledExpression">The compiled expression.</param>
         /// <param name="language">The language (e.g. "de", "en", etc.).</param>
         /// <exception cref="System.ArgumentException">On invalid property expression type (must be of type MemberExpression).</exception>
+        /// <typeparam name="T">The object (e.g. entity) type.</typeparam>
+        /// <typeparam name="TResult">Type of the result of the expression.</typeparam>
         public void Add<T, TResult>(Expression<Func<T, TResult>> property, CompiledExpression<T, TResult> compiledExpression, string language = "")
         {
             var member = property.Body as MemberExpression;
@@ -68,6 +70,8 @@ namespace PropertyTranslator
         /// <param name="language">The language (e.g. "de", "en", etc.).</param>
         /// <returns></returns>
         /// <exception cref="System.ArgumentException">On invalid property expression type (must be of type MemberExpression).</exception>
+        /// <typeparam name="T">The object (e.g. entity) type.</typeparam>
+        /// <typeparam name="TResult">Type of the result of the expression.</typeparam>
         public CompiledExpressionMap<T, TResult> Add<T, TResult>(Expression<Func<T, TResult>> property, Expression<Func<T, TResult>> expression, string language = "")
         {
             var member = property.Body as MemberExpression;
@@ -85,6 +89,8 @@ namespace PropertyTranslator
         /// </summary>
         /// <param name="method">The method.</param>
         /// <returns></returns>
+        /// <typeparam name="T">The object (e.g. entity) type.</typeparam>
+        /// <typeparam name="TResult">Type of the result of the expression.</typeparam>
         public CompiledExpression<T, TResult> Get<T, TResult>(MethodBase method)
         {
             CompiledExpression result;

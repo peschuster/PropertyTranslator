@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 namespace PropertyTranslator
 {
     /// <summary>
-    /// Provider for <see cref="PropertyTranslator.PropertyVisitor{T}"/>.
+    /// Expression visitor resolving and performing registered property translations.
     /// </summary>
     public class PropertyVisitor : ExpressionVisitor
     {
@@ -22,16 +22,15 @@ namespace PropertyTranslator
         private readonly TranslationMap map;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PropertyVisitor{T}" /> class.
+        /// Initializes a new instance of the <see cref="PropertyVisitor" /> class with default <see cref="TranslationMap"/>.
         /// </summary>
         public PropertyVisitor()
             : this(TranslationMap.DefaultMap)
         {
         }
 
-        /// <sum
-        /// mary>
-        /// Initializes a new instance of the <see cref="PropertyVisitor{T}" /> class.
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PropertyVisitor" /> class.
         /// </summary>
         /// <param name="map">The translation map.</param>
         public PropertyVisitor(TranslationMap map)
@@ -51,16 +50,16 @@ namespace PropertyTranslator
         {
             CompiledExpression expression;
 
-            // Ensure that all property mappings are registered (the usual way)
+            // Ensure that all property mappings are registered (the usual way -> on object type)
             EnsureTypeInitialized(node.Member.DeclaringType);
 
-            // Ensure that all property mappings are registered (when the linq quey was built against an interface)
-            if (IsBuildAgainstInterface(node))
+            // Ensure that all property mappings are registered (when the linq query was built towards an interface)
+            if (IsBuildOnInterface(node))
             {
                 EnsureTypeInitialized(node.Expression.Type);
             }
 
-            if ((IsBuildAgainstInterface(node) && this.map.TryGetValue(node.Member, node.Expression.Type, out expression))
+            if ((IsBuildOnInterface(node) && this.map.TryGetValue(node.Member, node.Expression.Type, out expression))
                  || this.map.TryGetValue(node.Member, out expression))
             {
                 return this.VisitCompiledExpression(expression, node.Expression);
@@ -107,11 +106,11 @@ namespace PropertyTranslator
         }
 
         /// <summary>
-        /// Determines whether the query was build against an interface.
+        /// Determines whether the query was build towards an interface.
         /// </summary>
         /// <param name="node">The current node.</param>
         /// <returns></returns>
-        private static bool IsBuildAgainstInterface(MemberExpression node)
+        private static bool IsBuildOnInterface(MemberExpression node)
         {
             return node.Expression != null 
                 && node.Expression.Type != null 

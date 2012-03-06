@@ -6,7 +6,9 @@ namespace PropertyTranslator
     /// <summary>
     /// Generic extension to the <see cref="CompiledExpression"/> class.
     /// </summary>
-    public sealed class CompiledExpression<T, TResult> : CompiledExpression
+    /// <typeparam name="T">The object (e.g. entity) type.</typeparam>
+    /// <typeparam name="TResult">Type of the result of the expression.</typeparam>
+    public class CompiledExpression<T, TResult> : CompiledExpression
     {
         /// <summary>
         /// The base expression.
@@ -19,14 +21,7 @@ namespace PropertyTranslator
         private readonly Func<T, TResult> function;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="CompiledExpression" /> class.
-        /// </summary>
-        public CompiledExpression()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CompiledExpression" /> class.
+        /// Initializes a new instance of the <see cref="CompiledExpression{T, TResult}" /> class.
         /// </summary>
         /// <param name="expression">The expression.</param>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures", Justification = "Necessary for evaluation of results.")]

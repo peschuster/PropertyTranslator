@@ -6,20 +6,20 @@ namespace PropertyTranslator
     /// <summary>
     /// Generic extension to the <see cref="CompiledExpressionMap"/>
     /// </summary>
-    /// <typeparam name="T"></typeparam>
-    /// <typeparam name="TResult"></typeparam>
+    /// <typeparam name="T">The object (e.g. entity) type.</typeparam>
+    /// <typeparam name="TResult">Type of the result of the expression.</typeparam>
     [Serializable]
     public class CompiledExpressionMap<T, TResult> : CompiledExpressionMap
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="CompiledExpressionMap" /> class.
+        /// Initializes a new instance of the <see cref="CompiledExpressionMap{T, TResult}" /> class.
         /// </summary>
         public CompiledExpressionMap()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="CompiledExpressionMap" /> class.
+        /// Initializes a new instance of the <see cref="CompiledExpressionMap{T, TResult}" /> class.
         /// </summary>
         /// <param name="info">The serialization info.</param>
         /// <param name="context">The streaming context.</param>
@@ -31,6 +31,7 @@ namespace PropertyTranslator
         /// <summary>
         /// Evaluates the compiled expression for current thread ui culture on the specified instance.
         /// </summary>
+        /// <param name="instance">Object instance to be evaluated.</param>
         /// <returns></returns>
         /// <exception cref="System.InvalidOperationException">If no <see cref="CompiledExpression"/> for current environment is available.</exception>
         public TResult Evaluate(T instance)

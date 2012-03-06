@@ -7,6 +7,7 @@ namespace PropertyTranslator
     /// <summary>
     /// Registers property mappings to the default <see cref="TranslationMap"/> and provides access to them.
     /// </summary>
+    /// <typeparam name="T">The object (e.g. entity) type.</typeparam>
     public static class DefaultTranslationOf<T>
     {
         /// <summary>
@@ -15,6 +16,7 @@ namespace PropertyTranslator
         /// <param name="instance">The object instance.</param>
         /// <param name="method">The method.</param>
         /// <returns>The result of the expression execution.</returns>
+        /// <typeparam name="TResult">Type of the result of the expression.</typeparam>
         public static TResult Evaluate<TResult>(T instance, MethodBase method)
         {
             return TranslationMap.DefaultMap.Get<T, TResult>(method).Evaluate(instance);
@@ -25,6 +27,7 @@ namespace PropertyTranslator
         /// </summary>
         /// <param name="property">The property wrapper.</param>
         /// <returns></returns>
+        /// <typeparam name="TResult">Type of the result of the expression.</typeparam>
         public static IncompletePropertyTranslation<TResult> Property<TResult>(Expression<Func<T, TResult>> property)
         {
             return new IncompletePropertyTranslation<TResult>(property);
@@ -38,6 +41,7 @@ namespace PropertyTranslator
         /// <param name="language">The ui culture (e.g. "de", "en", etc.).</param>
         /// <returns></returns>
         /// <exception cref="System.ArgumentException">On invalid property expression type (must be of type MemberExpression).</exception>
+        /// <typeparam name="TResult">Type of the result of the expression.</typeparam>
         public static CompiledExpressionMap<T, TResult> Property<TResult>(Expression<Func<T, TResult>> property, Expression<Func<T, TResult>> expression, string language = "")
         {
             return TranslationMap.DefaultMap.Add<T, TResult>(property, expression, language);
@@ -46,6 +50,7 @@ namespace PropertyTranslator
         /// <summary>
         /// Property wrapper for chained registration.
         /// </summary>
+        /// <typeparam name="TResult">Type of the result of the expression.</typeparam>
         public class IncompletePropertyTranslation<TResult>
         {
             private readonly Expression<Func<T, TResult>> property;
