@@ -12,3 +12,4 @@ _ReSharper.*
 *[Rr]e[Ss]harper.user
 _ReSharper.*/
 src/packages/*
+dist/
