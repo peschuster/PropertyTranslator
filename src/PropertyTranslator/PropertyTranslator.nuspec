@@ -8,7 +8,7 @@
     <licenseUrl>http://www.opensource.org/licenses/MS-PL</licenseUrl>
     <projectUrl>https://github.com/peschuster/PropertyTranslator</projectUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <description>Linq translator for properties in queries (based on Microsoft.Linq.Translations).</description>
+    <description>Translates computed properties in LINQ queries into their implementation (based on Microsoft.Linq.Translations).</description>
     <releaseNotes>Initial release.</releaseNotes>
     <copyright>Copyright 2012</copyright>
     <tags>Linq Expressions ExpressionVisitor EF Translation</tags>

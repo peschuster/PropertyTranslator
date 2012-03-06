@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die mit einer Assembly verknüpft sind.
 [assembly: AssemblyTitle("PropertyTranslator")]
-[assembly: AssemblyDescription("Linq translator for properties in queries (based on Microsoft.Linq.Translations).")]
+[assembly: AssemblyDescription("Translates computed properties in LINQ queries into their implementation (based on Microsoft.Linq.Translations).")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Peter Schuster")]
 [assembly: AssemblyProduct("PropertyTranslator")]

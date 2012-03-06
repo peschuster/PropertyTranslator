@@ -1,12 +1,14 @@
 ## PropertyTranslator
 
-Linq translator for properties in queries (based on [Microsoft.Linq.Translations](https://github.com/damieng/Linq.Translations)). 
+Translates computed properties in LINQ queries into their implementation (based on [Microsoft.Linq.Translations](https://github.com/damieng/Linq.Translations)). 
 
 ### What does it?
 
 *PropertyTranslator* exchanges properties in linq queries before execution. This is especially useful if the underlying LINQ provider does not support some kind of operation or you want to add client-side calculations in your business logic to e.g. an EntityFramework model.
 
 For a general introduction into the topic, have a look at [this blog post](http://damieng.com/blog/2009/06/24/client-side-properties-and-any-remote-linq-provider). *PropertyTranslator* actually is a enhancement of the presented solution in the post.
+
+For an introduction specifically to PropertyTranslator have a look at these two blog posts: [LINQ: How to dynamically map properties](http://www.peschuster.de/2012/03/linq-how-to-dynamically-map-properties/) and [PropertyTranslator and Interfaces](http://www.peschuster.de/2012/03/propertytranslator-and-interfaces/)
 
 ### What's the difference to Linq.Translations?
 
@@ -81,3 +83,7 @@ You can *enable* PropertyTranslator by adding the `PropertyVisitor` to your Enti
             }
         }
     }
+
+## How to use it
+PropertyTranslator is on Nuget: [http://nuget.org/packages/Linq.PropertyTranslator](http://nuget.org/packages/Linq.PropertyTranslator)
+I'd recommend to use it together with [QueryInterceptor](http://nuget.org/packages/QueryInterceptor) by David Fowler.
