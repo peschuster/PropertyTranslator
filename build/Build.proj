@@ -58,7 +58,7 @@
 		</ConvertToAbsolutePath>
 
 		<Exec WorkingDirectory="$(SourceDirAbs)\PropertyTranslator" 
-          Command="$(NugetPathAbs) pack PropertyTranslator.csproj -Properties Configuration=Nuget -Symbols -o $(DistDirAbs)" />
+			Command="$(NugetPathAbs) pack PropertyTranslator.csproj -Properties Configuration=Nuget -Symbols -o $(DistDirAbs)" />
 	</Target>
 
 	<Target Name="clean">
